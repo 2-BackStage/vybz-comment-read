@@ -16,7 +16,7 @@ public class CommentDeleteEventConsumer {
 
     @KafkaListener(
             topics = "comment-delete-event",
-            groupId = "comment-read-group",
+            groupId = "delete-comment-read-group",
             containerFactory = "commentDeleteEventKafkaListenerContainerFactory"
     )
     public void consume(CommentDeleteEvent event) {

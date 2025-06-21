@@ -21,7 +21,7 @@ public class CommentUpdateEventConsumer {
 
     @KafkaListener(
             topics = "comment-update-event",
-            groupId = "comment-read-group",
+            groupId = "update-comment-read-group",
             containerFactory = "commentUpdateEventKafkaListenerContainerFactory"
     )
     public void consume(CommentUpdateEvent event) {

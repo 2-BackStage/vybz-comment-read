@@ -17,7 +17,7 @@ public class CommentCreateEventConsumer {
 
     @KafkaListener(
             topics = "comment-create-event",
-            groupId = "comment-read-group",
+            groupId = "create-comment-read-group",
             containerFactory = "commentCreateEventKafkaListenerContainerFactory"
     )
     public void consume(CommentCreateEvent event) {
